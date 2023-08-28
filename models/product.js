@@ -58,7 +58,7 @@ Product.init(
         sub_category_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'category',
+                model: 'subCategory',
                 key: 'id'
 
             }

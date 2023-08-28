@@ -1,29 +1,75 @@
 const router = require('express').Router();
-// const Dish = require('../models/Dish');
+const Category = require('../models/category');
+const SubCategory = require('../models/subCategory');
+const Product = require('../models/product');
+const Color = require('../models/color');
 
-// // route to get all dishes
-// router.get('/', async (req, res) => {
+// route to get all categories
+// header
+router.get('/', async (req, res) => {
 
-//                 const dishData= await Dish.findAll().catch((err) => { 
-//                     res.json(err);
-//                   });
-//                     const dishes = dishData.map((dish) => dish.get({ plain: true }));
-//                     res.render('all', { dishes,name:{'menu':[10,20,30]} });
+
+    const category = await Category.findAll({
+      include: [
+        {
+          model: SubCategory,
+          attributes: ['sub_category_name', 'slug','category_id'],
+        },
+      ],
+    });
+
+    const catData = category.map((catItem) =>
+             catItem.get({ plain: true })
+    );
+
+
+
+  const productData= await Product.findAll().catch((err) => { 
+    res.json(err);
+  });
+    const productList = productData.map((item) => item.get({ plain: true }));
+console.log(catData)
+console.log(productList)
+
+  res.render('homepage', {
+    productList,
+    catData,
+  
+  });
+
+   
+});
+
+
+//left side start here
+
+// router.get('/cat', async (req, res) => {
+
+//   try {
+//     const products = await SubCategory.findAll({
+//       include: [
+//         {
+//           model: Product,
+//           attributes: ['product_name','price', 'slug','product_image_path','sub_category_id'],
+//         },
+//       ],
 //     });
 
-// // route to get one dish
-// router.get('/dish/:id', async (req, res) => {
-//   try{ 
-//       const dishData = await Dish.findByPk(req.params.id);
-//       if(!dishData) {
-//           res.status(404).json({message: 'No dish with this id!'});
-//           return;
-//       }
-//       const dish = dishData.get({ plain: true });
-//       res.render('dish', dish);
-//     } catch (err) {
-//         res.status(500).json(err);
-//     };     
-// });
+//     const proData = products.map((proItem) =>
+//              proItem.get({ plain: true })
+//     );
+// console.log(proData)
+//     res.render('homepage', {
+//       proData,
+//     });
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
 
+
+
+
+   
+// });
 module.exports = router;

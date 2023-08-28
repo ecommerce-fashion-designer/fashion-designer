@@ -9,7 +9,7 @@ const productImageData = [
   },
   {
     product_image:"women",
-    image_path:"https://i.dummyjson.com/data/products/2/2.jpg",
+   product_image_path:"https://i.dummyjson.com/data/products/2/2.jpg",
     product_id:2
    
   },

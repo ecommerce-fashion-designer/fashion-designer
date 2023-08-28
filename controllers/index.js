@@ -2,7 +2,7 @@ const router = require('express').Router();
 //backend
 const apiRoutes = require('./api');
 
-//frontend data
+//frontend call
 const homeRoutes = require('./home-routes');
 
 

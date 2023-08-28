@@ -1,0 +1,147 @@
+       *{
+    margin: 0;
+    padding:0;
+      list-style: none;
+    text-decoration: none;
+ }
+ :root{
+    --primary-color:#b78723;
+ --font-family:'Source Serif 4', serif;
+}
+.header {
+    background: var(--primary-color);
+    padding: 12px 0 0px 0px;
+    line-height: 0;
+    font-family: var(--font-family);
+}
+.contact-us {
+    font-size: 14px;
+    color: #f4e9d4;
+    padding-top: 7px;
+    font-weight: 400;
+}
+.contact-us a {
+    font-size: 14px;
+    color: #f4e9d4;
+    font-weight: 400;
+    font-family: var(--font-family)
+}.header span {
+    color: #fff;
+    padding: 0 5px;
+}.right-headerpanel {
+    line-height: 0;
+}
+.right-headerpanel li {
+    display: inline-block;
+}
+.right-headerpanel li a {
+    font-size: 14px;
+    color: #f4e9d4;
+}
+.header li:last-child {
+    padding: 8px 0;
+}
+.right-headerpanel li a {
+    font-size: 14px;
+    color: #f4e9d4;
+}
+.header span {
+    color: #fff;
+    padding: 0 5px;
+}
+.right-headerpanel li a {
+    font-size: 14px;
+    color: #f4e9d4;
+}
+
+
+
+
+/* Header start here */
+header{
+    padding: 15px 0px;
+}
+header .logo{
+    flex-basis: 25%;
+}
+header nav{
+    flex-basis:60%;
+}
+header nav ul li{
+    list-style: none;
+    cursor: pointer;
+    padding-right: 35px;
+}
+header ul li:hover a{
+    color: #b78723!important;
+    border-bottom: 2px solid #b78723;
+}
+header nav ul li a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 4px;
+    color: #2e2e2d!important;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    font-family: Montserrat;
+}
+header .cart{
+    flex-basis: 20%;
+
+}
+.sub-items{
+   
+    width: 100%;
+   z-index: 999;
+    left: 0px;
+    background: #fff;
+    box-shadow: 0px 0px 10px 2px #ccc;
+    top: 100%;
+    transition: .3s;
+    transform: scaleY(0);
+    transform-origin: top;
+
+}
+header ul li:hover .sub-items{
+  transform: scaleY(1.0);
+    
+   
+}
+
+.submenu-item1{
+    flex-basis: 45%;
+}
+.submenu-item1:first-child{
+padding-left: 50px;
+}
+.submenu-item1>.submenu-child>li:first-child{
+    border-bottom: 1px solid #ccc;
+    letter-spacing: 1px;
+    display: table;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.submenu-item1>.submenu-child>li{
+    color: #0a2134;
+    
+    padding-bottom: 20px;
+    font-size: 17px;
+    
+    list-style: none;
+/*  margin-bottom: 15px;*/
+}
+.submenu-item1>.submenu-child>li>span{
+    border-bottom: 4px solid #2699fb;
+    padding-bottom: 17px;
+}
+.list-itme-list{
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 2px  #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.product-list-items{
+    flex-basis: 30%;
+    margin: 1%;
+}

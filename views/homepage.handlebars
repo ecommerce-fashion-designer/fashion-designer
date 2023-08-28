@@ -1,0 +1,94 @@
+ {{!-- header --}}
+  <header class="d-flex  align-content-center">
+                <div class="logo">Logo</div>
+                <nav class="position-relative">
+                    <ul class="d-flex justify-content-center align-content-center">
+                         
+{{#each catData as | catItems|}}
+
+                         
+                        <li><a href="">{{catItems.category_name}}</a>
+                               <div class="sub-items position-absolute">
+                            {{#each catItems.subCategories as | subcat | }}
+                            
+                            <h3>{{subcat.sub_category_name}}</h3>
+                          
+                            <ul>
+                                           
+                                
+                                           
+                                            
+                                        
+                                     
+                            </ul>
+                                  {{/each}}
+                      
+                            </div>
+                        
+                        
+                        </li>
+                          {{/each}}
+                        
+
+                    </ul>
+                </nav>
+                <div class="cart text-end"><i class="fa-solid fa-cart-shopping"></i><span><sup>0</sup></span></div>
+            </header>
+ 
+ 
+ {{!-- Body --}}
+ <div class="row mt-5">
+                    <div class="col-md-3">
+             <div class="list-items">
+         <div class="list-itme-list">
+            <h3>Categories</h3>
+            <ul>
+               <li>dsff</li>
+            </ul>
+         </div>
+         <div class="list-itme-list">
+            <h3>Filter By price</h3>
+           <p>$0 to $100</p>
+           <p>$100 to $200</p>
+           <p>$200 to $300</p>
+         </div>
+         <div class="list-itme-list">
+            <h3>Filter By Color</h3>
+           <input type="checkbox"/>Red<br/>
+           <input type="checkbox"/>Red<br/>
+           <input type="checkbox"/>Red
+         </div>
+         
+                </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row">
+
+                          
+                                            {{#each productList as | proItems |}}
+                                            
+                                            
+
+
+                            <div class="col-md-4">
+                                <div class="product-list-items">
+                                    <div class="card" style="width: 18rem;">
+                                        <img class="card-img-top" src="..." alt="Card image cap">
+                                        <div class="card-body">
+                                          <h5 class="card-title">{{proItems.product_name}}</h5>
+                                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                          <a href="#" class="btn btn-primary">Add to cart</a>
+                                        </div>
+                                      </div>
+                                      
+                                </div>
+                            </div>
+
+
+                                {{/each}}      
+
+                          
+                        </div>
+
+                    </div>
+                </div>

@@ -10,7 +10,7 @@ const productData = [
     is_stock:true,
     slug:"Double Breasted Beige 2-Piece Suit",
     product_image_path:"https://i.dummyjson.com/data/products/2/2.jpg",
-    category_id: 1,
+    sub_category_id: 1,
     color_id:1
   },
   {
@@ -22,7 +22,7 @@ const productData = [
     is_stock:true,
     slug:"Ethnic Printed Wedding Nehru Waistcoat",
     product_image_path:"https://i.dummyjson.com/data/products/2/2.jpg",
-    category_id: 2,
+    sub_category_id: 2,
     color_id:2
   },
   {
@@ -34,7 +34,7 @@ const productData = [
     is_stock:true,
     slug:"Stylish Blue Embroidered Gown",
     product_image_path:"https://i.dummyjson.com/data/products/2/2.jpg",
-    category_id: 3,
+    sub_category_id: 3,
     color_id:3
   },
   {
@@ -46,7 +46,7 @@ const productData = [
     is_stock:true,
     slug:"Grey And Black Lycra Ready To Wear Saree",
     product_image_path:"https://i.dummyjson.com/data/products/2/2.jpg",
-    category_id: 4,
+    sub_category_id: 4,
     color_id:2
   },
   {
@@ -58,7 +58,7 @@ const productData = [
     is_stock:true,
     slug:"Stylish Blue Embroidered Gown",
     product_image_path:"https://i.dummyjson.com/data/products/2/2.jpg",
-    category_id: 5,
+    sub_category_id: 5,
     color_id:1
   },
   {
@@ -70,7 +70,7 @@ const productData = [
     is_stock:true,
     slug:"Grey And Black Lycra Ready To Wear Saree",
     product_image_path:"https://i.dummyjson.com/data/products/2/2.jpg",
-    category_id: 5,
+    sub_category_id: 5,
     color_id:3
   },
   

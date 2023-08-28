@@ -1,36 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Registry</title>
-  <link rel="stylesheet" href="/css/jass.css">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/jass.css">
+
 </head>
 
 <body>
-  {{!-- <header class="display-flex justify-space-between align-center p-2">
-    <h1>
-      User Registry
-    </h1>
-    <!-- TODO: Add a comment describing the functionality of this helper -->
-    {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
-    </nav>
-    {{/if}}
-  </header> --}}
-  <main class="container container-fluid mt-5">
-    {{{ body }}}
-  </main>
-  <footer>
-      
-  </footer>
 
-  <!-- TODO: Add a comment describing the functionality of this helper -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
+
+    <section class="header d-none d-md-block">
+        <div class="container contianer_padding">
+            <div class="row">
+                <div class="col-xl-6 col-md-6 d-none d-md-block">
+                    <div class="contact-us"> Contact us 24/7 :<a href="tel:+91-7062113105" title="Call Us"> +61-9999999
+                        </a>
+                        <span> /</span>
+                        <a href="mailto:www.google.com" title="Mail Us"> test@test.com</a>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6 col-12 text-end">
+                    <ul class="right-headerpanel text-right">
+
+                        <li><a href="/login" title="Login"> LOGIN </a><span>/</span>
+                            <a href="/register" title="Register"> REGISTER</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Header start here -->
+    <div class="container">
+        <div class="container-fluid">
+           
+        </div>
+    </div>
+    <!-- Header ends here -->
+    <!-- body start here -->
+    <section>
+        <div class="container-fluid ">
+            <div class="container">
+               {{{ body }}}
+                 </div>
+        </div>
+    </section>
+    <!-- body ends here -->
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
 
 </html>

@@ -5,32 +5,32 @@ const subcategoryData = [
   {
     sub_category_name: 'PartWear Suits',
     slug:'PartWear Suits',
-    main_category_id: 1,
+    category_id: 1,
   },
   {
     sub_category_name: 'Nehru jacket',
     slug: 'Nehru jacket',
-    main_category_id: 1,
+    category_id: 1,
   },
    {
     sub_category_name: 'Gowns',
     slug: 'Gowns',
-    main_category_id: 2,
+    category_id: 2,
   },
   {
     sub_category_name: 'Dresses',
     slug: 'Dresses',
-    main_category_id: 2,
+   category_id: 2,
   },
   {
     sub_category_name: 'Frocks',
     slug: 'Frocks',
-    main_category_id: 3,
+   category_id: 3,
   },
   {
     sub_category_name: 'Dresses',
     slug:'Dresses',
-    main_category_id: 3,
+    category_id: 3,
   },
 ];
 
