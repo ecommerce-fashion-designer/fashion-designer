@@ -45,7 +45,7 @@ const productData = [
     stock: 10,
     is_stock:true,
     slug:"Grey And Black Lycra Ready To Wear Saree",
-    product_image_path:"https://i.dummyjson.com/data/products/2/2.jpg",
+    product_image_path:"https://cdn.pixabay.com/photo/2017/08/28/02/59/suit-2688317_1280.jpg",
     sub_category_id: 4,
     color_id:2
   },
@@ -57,7 +57,7 @@ const productData = [
     stock: 10,
     is_stock:true,
     slug:"Stylish Blue Embroidered Gown",
-    product_image_path:"https://i.dummyjson.com/data/products/2/2.jpg",
+    product_image_path:"https://cdn.pixabay.com/photo/2017/08/28/02/59/suit-2688317_1280.jpg",
     sub_category_id: 5,
     color_id:1
   },
@@ -69,7 +69,7 @@ const productData = [
     stock: 10,
     is_stock:true,
     slug:"Grey And Black Lycra Ready To Wear Saree",
-    product_image_path:"https://i.dummyjson.com/data/products/2/2.jpg",
+    product_image_path:"https://cdn.pixabay.com/photo/2017/08/28/02/59/suit-2688317_1280.jpg",
     sub_category_id: 5,
     color_id:3
   },

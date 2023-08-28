@@ -1,10 +1,9 @@
-const User = require('./User');
+
 const Category = require('./category')
 const SubCategory = require('./subCategory')
 const Product = require('./product')
 const Color = require('./color')
-
-const Register = require('./Register')
+const User = require('./User');
 const UserProduct = require('./user_products')
 
 
@@ -42,4 +41,4 @@ UserProduct.belongsTo(User,{
     foreignKey: 'user_id',
 })
 
-module.exports = { Category, SubCategory,Color, Product ,UserProduct,Register,User};
+module.exports = { Category, SubCategory,Color, Product ,UserProduct,User};
