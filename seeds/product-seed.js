@@ -9,7 +9,7 @@ const productData = [
     stock: 14,
     is_stock:true,
     slug:"Double Breasted Beige 2-Piece Suit",
-    product_image_path:"https://i.dummyjson.com/data/products/2/2.jpg",
+    product_image_path:"https://cdn.pixabay.com/photo/2017/08/28/02/59/suit-2688317_1280.jpg",
     sub_category_id: 1,
     color_id:1
   },
@@ -21,7 +21,7 @@ const productData = [
     stock: 14,
     is_stock:true,
     slug:"Ethnic Printed Wedding Nehru Waistcoat",
-    product_image_path:"https://i.dummyjson.com/data/products/2/2.jpg",
+    product_image_path:"https://cdn.pixabay.com/photo/2016/11/22/22/25/groom-1850932_1280.jpg",
     sub_category_id: 2,
     color_id:2
   },
@@ -33,7 +33,7 @@ const productData = [
     stock: 10,
     is_stock:true,
     slug:"Stylish Blue Embroidered Gown",
-    product_image_path:"https://i.dummyjson.com/data/products/2/2.jpg",
+    product_image_path:"https://media.istockphoto.com/id/1422546700/photo/fashion-model-in-red-evening-dress-beautiful-woman-in-princess-ball-gown-and-curly-hairstyle.jpg?b=1&s=170667a&w=0&k=20&c=jYyJ7Cp8nEDa_KhgZFTjKXRomXsdvx9TGOxa_-YquOo=",
     sub_category_id: 3,
     color_id:3
   },

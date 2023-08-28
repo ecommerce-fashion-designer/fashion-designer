@@ -24,10 +24,19 @@ router.get('/', async (req, res) => {
 
 
 
-  const productData= await Product.findAll().catch((err) => { 
+  const productData= await Product.findAll({
+    include: [
+      {
+        model: Color,
+        attributes: ['color_name'],
+      },
+    ],
+  }).catch((err) => { 
     res.json(err);
   });
     const productList = productData.map((item) => item.get({ plain: true }));
+
+    
 console.log(catData)
 console.log(productList)
 
