@@ -1,0 +1,68 @@
+{{!-- header --}}
+
+{{> header catData=catData}}
+
+{{!-- Body --}}
+<div class="row mt-5">
+    <div class="col-md-3">
+        <div class="list-items">
+            <div class="list-itme-list">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="">{{cuatData.category_name}}</a>
+
+                        <div class="catlistitems">
+                            {{#each cuatData.subCategories as | subcat |}}
+
+
+
+                            <h6><a
+                                    href="/category/sub-category/{{../cuatData.slug}}/{{subcat.slug}}">{{subcat.sub_category_name}}</a>
+                            </h6>
+
+                            <ul>
+
+                            </ul>
+                            {{/each}}
+
+                        </div>
+
+
+                    </li>
+
+                </ul>
+            </div>
+            <div class="list-itme-list">
+                <h3>Filter By price</h3>
+                <input type="range" min="0" max="500">
+            </div>
+
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="row">
+            {{#each finalProductLists as | proItems |}}
+
+
+            <div class="col-md-4">
+                <div class="product-list-items">
+                    <div class="card" style="width: 18rem;">
+                        <a href="/product/{{proItems.slug}}">
+                            <img class="card-img-top productImage" src={{proItems.product_image_path}}
+                                alt="Card image cap">
+                        </a>
+
+                        <div class="card-body">
+                            <h5 class="card-title prodcut-title">{{proItems.product_name}}</h5>
+                            <p class="card-text product-price">Price:{{proItems.price}}</p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            {{/each}}
+        </div>
+
+    </div>
+</div>

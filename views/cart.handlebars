@@ -1,0 +1,43 @@
+
+
+<div class="container-fluid py-5">
+    <div class="container">
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th scope="col">Sr.No</th>
+                    <th scope="col">Product image</th>
+                    <th scope="col">Product name</th>
+                    <th scope="col">Quantity</th>
+
+                    <th>Price</th>
+                    <th scope="col">Total</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {{#if cart}}
+                {{#each cart as | cartItems |}}
+                <tr>
+                    <th scope="row">{{cartItems.pid}}</th>
+                    <td><img src='{{cartItems.productImage}}' width="40px" /></td>
+                    <td>{{cartItems.productNamme}}</td>
+
+                    <td>{{cartItems.qty}}</td>
+                    <td>{{cartItems.price}}</td>
+
+                    <td></td>
+
+                    <td><button><a href="/cart/delete-cart/{{cartItems.pid}}">Delete</a></button></td>
+                </tr>
+                {{/each}}
+                
+                {{else}}
+                <tr><td class="text-center"  colspan="6">No More Data</td></tr>
+                {{/if}}
+            </tbody>
+        </table>
+    </div>
+</div>

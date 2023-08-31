@@ -7,7 +7,7 @@
 
  :root {
      --primary-color: #b78723;
-     font-family: 'Poppins', sans-serif;
+    --font-family: 'Poppins', sans-serif;
  }
 
  .header {
@@ -77,8 +77,21 @@
 
  header .logo {
      flex-basis: 25%;
+     font-weight: 900;
+     font-size: 26px;
+     font-family: cursive;
  }
-
+ input[type='range'] {
+    overflow: hidden;
+    width: 90%;
+    -webkit-appearance: none;
+    background-color:#fff;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    background-color: #b787234d;
+    margin-bottom: 20px;
+  }
+  
  header nav {
      flex-basis: 60%;
  }
@@ -317,3 +330,14 @@
  .product-details-img img{
     width: 100%;
  }
+ /* product detail page start here */
+ .product-details-img{
+    width: 100%;
+}
+.product-details-img img{
+    width: 100%;
+}
+.product-info{
+    font-size: 20px;
+    color: #000;
+}

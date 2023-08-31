@@ -17,18 +17,21 @@ const PORT = process.env.PORT || 3001;
 const hbs = exphbs.create({ helpers });
 
 
-// const sess = {
-//   secret: 'fashion designer',
-//   cookie: {},
-//   resave: false,
-//   saveUninitialized: true,
-//   store: new SequelizeStore({
-//     db: sequelize
-//   })
-// };
+// Set up sessions with cookies
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {
+    // Stored in milliseconds
+    maxAge: 24 * 60 * 60 * 1000, // expires after 1 day
+  },
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize,
+  }),
+};
 
-
-// app.use(session(sess));
+app.use(session(sess));
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
