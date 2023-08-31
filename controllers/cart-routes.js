@@ -59,7 +59,7 @@ router.get('/add-to-cart/:pid?', async (req, res) => {
 router.get('/', async (req, res) => {
  
      let finalcart=req.session.cart ?? []
-    res.render('cart',{'cart':finalcart});
+    res.render('cart',{'cart':finalcart,  loggedIn: req.session.loggedIn}); //may need to remove loggedIn
     
          
   });

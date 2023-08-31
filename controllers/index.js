@@ -1,7 +1,7 @@
 const router = require('express').Router();
+
 //backend
 const apiRoutes = require('./api');
-
 router.use('/api', apiRoutes);
 
 
@@ -21,6 +21,10 @@ router.use('/category', categoryRoutes);
 //cart page
 const cartRoutes = require('./cart-routes');
 router.use('/cart', cartRoutes);
+
+//login page
+const loginRoutes = require('./login-routes');
+router.use('/login', loginRoutes);
 
 
 module.exports = router;
