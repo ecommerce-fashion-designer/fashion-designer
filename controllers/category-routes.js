@@ -52,7 +52,7 @@ const currentproductData= await Product.findAll()
 
 
 
-  res.render('category-filter', {cuatData,catData,finalsubCatId,finalProductLists});
+  res.render('category-filter', {cuatData,catData,finalsubCatId,finalProductLists,  loggedIn: req.session.loggedIn});
 
 });
 
@@ -106,7 +106,7 @@ const pData = currentsubCategory.get({ plain: true });
 
 
 
-res.render('category-filter', {catData,cuatData,finalProductLists:pData.products});
+res.render('category-filter', {catData,cuatData,finalProductLists:pData.products,  loggedIn: req.session.loggedIn,});
 })
 
 

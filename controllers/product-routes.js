@@ -43,6 +43,7 @@ router.get('/', async (req, res) => {
   res.render('product', {
     productList,
     catData,
+    loggedIn: req.session.loggedIn,
    
   
   });
@@ -75,7 +76,7 @@ router.get('/:slug', async (req, res) => {
       const productData = pData.get({ plain: true });
 
    console.log(productData)
-      res.render('product-deatils',{productData, cartTotal:cartTotal.length});
+      res.render('product-deatils',{productData, cartTotal:cartTotal.length,  loggedIn: req.session.loggedIn});
     } catch (err) {
         res.status(500).json(err);
     };     
