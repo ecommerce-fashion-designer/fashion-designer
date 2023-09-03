@@ -360,3 +360,7 @@
  #logo {
      max-width: 14%;
  }
+
+ .login-center {
+    text-align: center;
+ }
