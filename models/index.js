@@ -34,11 +34,11 @@ Color.hasMany(Product, {
     foreignKey: 'color_id',
     onDelete: 'CASCADE',
 });
-UserProduct.belongsTo(Product,{
+UserProduct.belongsTo(Product, {
     foreignKey: 'product_id',
 })
-UserProduct.belongsTo(User,{
+UserProduct.belongsTo(User, {
     foreignKey: 'user_id',
 })
 
-module.exports = { Category, SubCategory,Color, Product ,UserProduct,User};
+module.exports = { Category, SubCategory, Color, Product, UserProduct, User };
