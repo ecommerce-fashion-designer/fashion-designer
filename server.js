@@ -4,7 +4,7 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 
- const helpers = require('./utils/helpers');
+const helpers = require('./utils/helpers');
 
 const sequelize = require('./config/connection');
 
@@ -42,6 +42,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: false }).then(() => { //turn off later once not testing database
   app.listen(PORT, () => console.log('Now listening'));
 });
