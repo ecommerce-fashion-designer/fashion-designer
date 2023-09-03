@@ -4,8 +4,6 @@ const {slugify}=require('slugify')
 
 
 //end point api/products
-
-
 router.get('/', async(req, res) => {
   try{
     const proData=await Product.findAll({
@@ -18,7 +16,6 @@ message:"you get all products"
 }catch(error){
   res.status(500).json(error);
 }
-
 });
 
 //get data by id
@@ -32,10 +29,8 @@ router.get('/:id', async(req, res) => {
    res.status(200).json(proData)
   }catch(error){
     res.status(500).json(error);
-  }
- 
+  } 
 });
-
 
 //create product 
 router.post('/', async(req, res) => {
@@ -56,7 +51,7 @@ const proData=await Product.update(req.body,{
   where:{
     id:req.params.id
   }
-})
+});
 
 if(!proData){
   res.status(404).json({message:'No product found with that id!'})

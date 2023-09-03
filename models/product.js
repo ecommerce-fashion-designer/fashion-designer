@@ -60,7 +60,6 @@ Product.init(
             references: {
                 model: 'subCategory',
                 key: 'id'
-
             }
         },
         color_id: {

@@ -14,7 +14,6 @@
 </header>
 <section>
 
-
     {{!-- body start here --}}
     <div class="container-fluid py-5">
         <div class="container">
@@ -23,8 +22,6 @@
                 <div class="col-md-6 col-12">
                     <div class="product-details-img">
                         <img src={{productData.product_image_path}} alt="hhh" title="df" />
-
-
                     </div>
                 </div>
                 <div class="col-md-6 col-12">
@@ -56,10 +53,13 @@
 
                             <button><a href="/cart/add-to-cart/{{productData.id}}">Add to Cart</a></button>
                         </div>
-                        <div class="btn go-back"><button><a href="/">Go Back</a></button></div>
+                        <div class="btn go-back">
+                            <button id="goBackButton">Go Back</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+

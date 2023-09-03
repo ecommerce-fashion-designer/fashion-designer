@@ -15,7 +15,6 @@ router.get('/:slug', async (req, res) => {
     catItem.get({ plain: true })
   );
 
-
   const currentCategory = await Category.findOne({
     where: {
       slug: req.params.slug
@@ -26,14 +25,11 @@ router.get('/:slug', async (req, res) => {
         attributes: ['id', 'sub_category_name', 'slug', 'category_id'],
       },
     ],
-  }
+  });
 
-  );
   const cuatData = currentCategory.get({ plain: true });
-
+  
   let finalsubCatId = cuatData.subCategories.map((v) => v.id)
-
-
 
   const currentproductData = await Product.findAll()
 
@@ -42,31 +38,23 @@ router.get('/:slug', async (req, res) => {
     });
   const productList = currentproductData.map((item) => item.get({ plain: true }));
 
-
   let finalProductLists = productList.filter((v) => {
     if (finalsubCatId.includes(v.sub_category_id)) {
       return v
     }
   })
 
-
-
-
   res.render('category-filter', { cuatData, catData, finalsubCatId, finalProductLists, loggedIn: req.session.loggedIn });
-
 });
-
 
 
 //side bar
 router.get('/sub-category/:slug/:sslug', async (req, res) => {
 
-
   const category = await Category.findAll();
   const catData = category.map((catItem) =>
     catItem.get({ plain: true })
   );
-
 
   const currentCategory = await Category.findOne({
     where: {
@@ -78,12 +66,9 @@ router.get('/sub-category/:slug/:sslug', async (req, res) => {
         attributes: ['id', 'sub_category_name', 'slug', 'category_id'],
       },
     ],
-  }
+  });
 
-  );
   const cuatData = currentCategory.get({ plain: true });
-
-
 
   const currentsubCategory = await SubCategory.findOne({
     where: {
@@ -95,14 +80,9 @@ router.get('/sub-category/:slug/:sslug', async (req, res) => {
         attributes: ['id', 'product_name', 'product_image_path', 'slug', 'price'],
       },
     ],
-  }
-
-  );
-
+  });
 
   const pData = currentsubCategory.get({ plain: true });
-
-
 
   pData.products.map(element => {
     element.product_image_path = element.product_image_path.slice(2);
@@ -111,7 +91,5 @@ router.get('/sub-category/:slug/:sslug', async (req, res) => {
 
   res.render('category-filter', { catData, cuatData, finalProductLists: pData.products, loggedIn: req.session.loggedIn, });
 })
-
-
 
 module.exports = router;

@@ -24,8 +24,6 @@ router.get('/', async (req, res) => {
     catItem.get({ plain: true })
   );
 
-
-
   const productData = await Product.findAll({
     include: [
       {
@@ -38,19 +36,12 @@ router.get('/', async (req, res) => {
   });
   const productList = productData.map((item) => item.get({ plain: true }));
 
-
-
   res.render('product', {
     productList,
     catData,
     loggedIn: req.session.loggedIn,
-
-
   });
-
-
 });
-
 
 
 router.get('/:slug', async (req, res) => {
@@ -69,10 +60,12 @@ router.get('/:slug', async (req, res) => {
         },
       ],
     });
+
     if (!pData) {
       res.status(404).json({ message: 'No product with this id!' });
       return;
     }
+
     const productData = pData.get({ plain: true });
 
     console.log(productData)
@@ -81,7 +74,6 @@ router.get('/:slug', async (req, res) => {
     res.status(500).json(err);
   };
 });
-
 
 
 module.exports = router;

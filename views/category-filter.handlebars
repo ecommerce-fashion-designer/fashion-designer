@@ -1,5 +1,4 @@
 {{!-- header --}}
-
 {{> header catData=catData}}
 
 {{!-- Body --}}
@@ -13,43 +12,33 @@
 
                         <div class="catlistitems">
                             {{#each cuatData.subCategories as | subcat |}}
-
-
-
                             <h6><a
                                     href="/category/sub-category/{{../cuatData.slug}}/{{subcat.slug}}">{{subcat.sub_category_name}}</a>
                             </h6>
-
                             <ul>
-
                             </ul>
                             {{/each}}
 
                         </div>
-
-
                     </li>
-
                 </ul>
             </div>
             <div class="list-itme-list">
                 <h3>Filter By price</h3>
                 <input type="range" min="0" max="500">
             </div>
-
         </div>
     </div>
     <div class="col-md-9">
         <div class="row">
             {{#each finalProductLists as | proItems |}}
 
-
             <div class="col-md-4">
                 <div class="product-list-items">
                     <div class="card" style="width: 18rem;">
                         <a href="/product/{{proItems.slug}}">
-                            <img class="card-img-top productImage" src="{{proItems.product_image_path}}" {{!-- add in
-                                format_path --}} alt="Product Image">
+                            <img class="card-img-top productImage" src="{{proItems.product_image_path}}"
+                                alt="Product Image">
                         </a>
 
                         <div class="card-body">

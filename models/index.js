@@ -7,7 +7,6 @@ const User = require('./User');
 const UserProduct = require('./user_products')
 
 
-
 SubCategory.belongsTo(Category, {
     foreignKey: 'category_id',
 });
@@ -20,12 +19,11 @@ Category.hasMany(SubCategory, {
 Product.belongsTo(SubCategory, {
     foreignKey: 'sub_category_id',
 });
-// Categories have many Products
+
 SubCategory.hasMany(Product, {
     foreignKey: 'sub_category_id',
     onDelete: 'CASCADE',
 });
-
 
 Product.belongsTo(Color, {
     foreignKey: 'color_id',

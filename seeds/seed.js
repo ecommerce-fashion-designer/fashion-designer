@@ -6,21 +6,12 @@ const colorData = require('./color-seed');
 
 const productData = require('./product-seed');
 
-
-
-
-
 const seedAll = async () => {
   await sequelize.sync({ force:false});
   await categoryData();
   await subcategoryData();
-
-  await colorData();
- 
-
+  await colorData(); 
   await productData();
-
-
 
   process.exit(0);
 };
