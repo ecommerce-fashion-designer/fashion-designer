@@ -21,7 +21,7 @@ Product.init(
             allowNull: false
         },
         product_desc: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT('long'),
             allowNull: false
         },
         price: {
