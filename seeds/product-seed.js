@@ -51,21 +51,21 @@ const productData = [
     sub_category_id: 5,
     color_id: 1
   },
+  // {
+  //   product_name: 'Modest Red Dress',
+  //   product_desc: "Modest Red Dress",
+  //   price: 55.00,
+  //   product_spec: "Large",
+  //   stock: 14,
+  //   is_stock: true,
+  //   slug: "dress_5",
+  //   product_image_path: "../../images/dresses/dress-5-1.jpg",
+  //   sub_category_id: 5,
+  //   color_id: 1
+  // },
   {
-    product_name: 'Modest Red Dress',
-    product_desc: "Modest Red Dress",
-    price: 55.00,
-    product_spec: "Large",
-    stock: 14,
-    is_stock: true,
-    slug: "dress_5",
-    product_image_path: "../../images/dresses/dress-5-1.jpg",
-    sub_category_id: 5,
-    color_id: 1
-  },
-  {
-    product_name: 'Black Dress',
-    product_desc: "Black Dress",
+    product_name: 'Patterned Dress',
+    product_desc: "Patterned Dress",
     price: 55.00,
     product_spec: "Large",
     stock: 14,
@@ -109,7 +109,7 @@ const productData = [
     stock: 14,
     is_stock: true,
     slug: "jacket_1",
-    product_image_path: "../../images/jackets/jacket-1-1.jpg",
+    product_image_path: "../../images/jackets/jacket-1-2.jpg",
     sub_category_id: 2,
     color_id: 1
   },
@@ -125,18 +125,18 @@ const productData = [
     sub_category_id: 2,
     color_id: 1
   },
-  {
-    product_name: 'Denim Jacket',
-    product_desc: "Denim Jacket",
-    price: 65.00,
-    product_spec: "Large",
-    stock: 14,
-    is_stock: true,
-    slug: "jacket_3",
-    product_image_path: "../../images/jackets/jacket-3-1.jpg",
-    sub_category_id: 2,
-    color_id: 1
-  },
+  // {
+  //   product_name: 'Denim Jacket',
+  //   product_desc: "Denim Jacket",
+  //   price: 65.00,
+  //   product_spec: "Large",
+  //   stock: 14,
+  //   is_stock: true,
+  //   slug: "jacket_3",
+  //   product_image_path: "../../images/jackets/jacket-3-1.jpg",
+  //   sub_category_id: 2,
+  //   color_id: 1
+  // },
   {
     product_name: 'Leopard Print Jacket',
     product_desc: "Leopard Print Jacket",
@@ -271,18 +271,18 @@ const productData = [
     sub_category_id: 7,
     color_id: 1
   },
-  {
-    product_name: 'Ripped Denim Jeans',
-    product_desc: "Ripped Denim Jeans",
-    price: 75.00,
-    product_spec: "Large",
-    stock: 14,
-    is_stock: true,
-    slug: "pants_5",
-    product_image_path: "../../images/pants/pants-5-1.jpg",
-    sub_category_id: 3,
-    color_id: 1
-  },
+  // {
+  //   product_name: 'Ripped Denim Jeans',
+  //   product_desc: "Ripped Denim Jeans",
+  //   price: 75.00,
+  //   product_spec: "Large",
+  //   stock: 14,
+  //   is_stock: true,
+  //   slug: "pants_5",
+  //   product_image_path: "../../images/pants/pants-5-1.jpg",
+  //   sub_category_id: 3,
+  //   color_id: 1
+  // },
 
   //skirts
   {
@@ -391,7 +391,7 @@ const productData = [
     stock: 14,
     is_stock: true,
     slug: "top_4",
-    product_image_path: "../../images/tops/top-4-1.jpg",
+    product_image_path: "../../images/tops/top-4-2.jpg",
     sub_category_id: 4,
     color_id: 1
   },
