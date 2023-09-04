@@ -9,6 +9,7 @@
      --primary-color: #b78723;
      --secondary-color: #fff6d6; 
      --green: #223112;
+     --green-transparent: rgba(34, 49, 18, 0.85);
      --font-family: 'Poppins', sans-serif;
  }
 
@@ -36,6 +37,18 @@
 
  #about-cards, #shop-cards {
     margin-top: 20px;
+ }
+
+ #shop-cards .card {
+    background-color: var(--green-transparent);
+    padding: 10px;
+    border-radius: 5px;
+ }
+
+ #shop-cards h4 {
+    color: white;
+    letter-spacing: 0.05em;
+    text-align: center;
  }
 
  footer, footer a {
@@ -72,7 +85,7 @@
 
  }
 
- .header span {
+ /* .header span {
      color: #fff;
      padding: 0 5px;
  }
@@ -114,11 +127,10 @@
      padding: 15px 0px;
  }
 
- header .logo {
-     flex-basis: 25%;
-     font-weight: 900;
-     font-size: 26px;
-     font-family: cursive;
+ .nav-item a {
+    color: white;
+    font-size: 18px;
+    letter-spacing: 0.05em;
  }
 
  input[type='range'] {
@@ -132,9 +144,9 @@
      margin-bottom: 20px;
  }
 
- header nav {
+ /* header nav {
      flex-basis: 60%;
- }
+ } */
 
  header nav ul li {
      list-style: none;
@@ -390,10 +402,6 @@
  .product-info {
      font-size: 20px;
      color: #000;
- }
-
- #logo {
-     max-width: 20%;
  }
 
  .login-center {

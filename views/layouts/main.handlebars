@@ -16,17 +16,58 @@
 </head>
 
 <body>
-    <section class="header d-none d-md-block">
-        <div class="container contianer_padding">
-            <div class="row">
-                <div class="col-xl-6 col-md-6 d-none d-md-block">
+    <div class="container-fluid primary-background">
+        <div class="container">
+            <div class="row d-flex justify-content-between align-items-center">
+                <div class="col-xl-3">
+                    <a href="/"><img id="logo" class="logo" src="/images/logo-white.png" alt="Logo" width="100px" height="auto"></a>
+                </div>
+                <div id="top-menu col-xl-9">
+                    <nav>
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/#about" title="home">ABOUT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/dashboard" title="dashboard">DASHBOARD</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/product" title="products">PRODUCTS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/cart" title="cart">CART</a>
+                            </li>
+                            <li class="nav-item">
+                                {{#if loggedIn}}
+                                <button id="logout">&#9094; LOGOUT &#9094;</button>
+                                {{else}}
+                                <a class="nav-link" href="/login" title="Login"> &#9094; LOGIN &#9094;</a>
+                                {{/if}}
+                            </li>
+                        </ul>
+                        {{!-- <ul>
+                            <li><a href="/" title="home"> HOME</a></li>
+                            <li><a href="/dashboard" title="dashboard"> DASHBOARD</a></li>
+                            <li><a href="/product" title="products"> PRODUCTS</a></li>
+                            <li><a href="/cart" title="cart"> CART</a></li>
+                            <li>
+                                {{#if loggedIn}}
+                                <button id="logout">&#9094; LOGOUT &#9094;</button>
+                                {{else}}
+                                <a href="/login" title="Login"> &#9094; LOGIN &#9094;</a>
+                                {{/if}}
+                            </li>
+                        </ul> --}}
+                    </nav>
+                </div>
+                {{!-- <div class="col-xl-6 col-md-6 d-none d-md-block">
                     <div class="contact-us"> Contact :<a href="/" title="email Us"> 404@pagenotfound.com
                         </a>
                         <span> /</span>
                         <a href="/" title="call Us"> 404404404</a>
                     </div>
-                </div>
-                <div class="col-xl-6 col-md-6 col-12 text-end">
+                </div> --}}
+                {{!-- <div class="col-xl-3">
                     <ul class="right-header text-right">
 
                         <li>
@@ -37,12 +78,12 @@
                             {{/if}}
                         </li>
                     </ul>
-                </div>
+                </div> --}}
             </div>
         </div>
-    </section>
+    </div>
 
-    <nav class="x header d-none d-md-block">
+    {{!-- <nav class="x header d-none d-md-block">
         <div class="container contianer_padding">
             <div class="row">
                 <div class="col-xl-6 col-md-6 d-none d-md-block">
@@ -54,7 +95,7 @@
                     <span> /</span>
                     <a href="/cart" title="cart"> CART</a>
                 </div>
-    </nav>
+    </nav> --}}
 
 
 
