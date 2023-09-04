@@ -1,15 +1,17 @@
 
-<header class="d-flex  align-content-center">
-    <div class="logo">Logo</div>
-    <nav class="position-relative">
-        <ul class="d-flex justify-content-center align-content-center">
-            {{#each catData as | catItems|}}
-            <li><a href="/category/{{catItems.slug}}">{{catItems.category_name}}</a>
-            </li>
-            {{/each}}
-        </ul>
-    </nav>
- 
-    <div class="cart text-end serch-input"> <input type="search" placeholder="search here..." />
-        </i></div>
+<header class="d-flex  align-content-center container">
+    <div class="row">
+        <div class="logo col-lg-2">Logo</div>
+        <nav class="position-relative col-lg-8">
+            <ul class="d-flex justify-content-center align-content-center">
+                {{#each catData as | catItems|}}
+                <li><a href="/category/{{catItems.slug}}">{{catItems.category_name}}</a>
+                </li>
+                {{/each}}
+            </ul>
+        </nav>
+        <div class="cart text-end serch-input col-lg-2"> <input type="search" placeholder="search here..." />
+            </i></div>
+
+    </div>
 </header>
