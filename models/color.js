@@ -22,7 +22,6 @@ Color.init(
       defaultValue: DataTypes.NOW,
     }
   },
-
   {
     sequelize,
     timestamps: false,

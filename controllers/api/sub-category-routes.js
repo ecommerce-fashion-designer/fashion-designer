@@ -16,7 +16,6 @@ message:"you get all categories"
 }catch(error){
   res.status(500).json(error);
 }
-
 });
 
 //get data by id
@@ -32,10 +31,8 @@ router.get('/:id', async(req, res) => {
    res.status(200).json(catData)
   }catch(error){
     res.status(500).json(error);
-  }
- 
+  } 
 });
-
 
 //create category 
 router.post('/', async(req, res) => {
@@ -48,7 +45,6 @@ router.post('/', async(req, res) => {
  }
 });
 
-
 //update data
 router.put('/:id', async(req, res) => {
  try{
@@ -56,7 +52,7 @@ const catData=await SubCategory.update(req.body,{
   where:{
     id:req.params.id
   }
-})
+});
 
 if(!catData){
   res.status(404).json({message:'No category found with that id!'})
