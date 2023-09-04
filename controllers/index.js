@@ -24,5 +24,9 @@ router.use('/cart', cartRoutes);
 const loginRoutes = require('./login-routes');
 router.use('/login', loginRoutes);
 
+//checkout page
+const checkoutRoutes = require('./checkout-routes');
+router.use('/checkout', checkoutRoutes);
+
 
 module.exports = router;
