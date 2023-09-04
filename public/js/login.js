@@ -26,7 +26,7 @@ const signupFormHandler = async (event) => {
   const password = document.querySelector('#password-signup').value.trim();
   const password2 = document.querySelector('#re-enter-password-signup').value.trim();
 
-  if (!password === password2) {
+  if (password !== password2) {
     alert("Passwords do not match");
     return;
   };
@@ -39,6 +39,7 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
+      alert('Login Successful!')
       document.location.replace('/product'); // change here for relocation
     } else {
       alert('Failed to sign up.');
