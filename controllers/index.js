@@ -28,5 +28,10 @@ router.use('/login', loginRoutes);
 const checkoutRoutes = require('./checkout-routes');
 router.use('/checkout', checkoutRoutes);
 
+//success page
+const successRoutes = require('./success-routes');
+router.use('/success', successRoutes);
+
+
 
 module.exports = router;
