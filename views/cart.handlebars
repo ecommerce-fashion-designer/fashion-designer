@@ -1,16 +1,14 @@
 <div class="container-fluid py-5">
+    <h1>YOUR CART</h1>
     <div class="container">
-        <table class="table">
-            <thead>
+        <table class="table table-hover mt-4">
+            <thead class="font-weight-bold">
                 <tr>
-                    <th scope="col">Sr.No</th>
-                    <th scope="col">Product image</th>
-                    <th scope="col">Product name</th>
-                    <th scope="col">Quantity</th>
-
-                    <th>Price</th>
-                    <th scope="col">Total</th>
-                    <th>Delete</th>
+                    <th scope="col">Product</th>
+                    <th scope="col"></th>
+                    <th scope="col">Price</th>
+                    <th scope="col">QTY.</th>
+                    <th scope="col" class="text-right">Total</th>
                 </tr>
             </thead>
 
@@ -18,12 +16,13 @@
                 {{#if cart}}
                 {{#each cart as | cartItems |}}
                 <tr>
-                    <th scope="row">{{cartItems.pid}}</th>
                     <td><img src='{{cartItems.productImage}}' width="40px" /></td>
-                    <td>{{cartItems.productNamme}}</td>
+                    <td class="font-weight-bold">{{cartItems.productNamme}}<a href="/cart/delete-cart/{{cartItems.pid}}">
+                        <br>
+                        <button type="button" class="btn btn-light">REMOVE</button></a></td>
+                    <td>${{cartItems.price}}</td>
                     <td>{{cartItems.qty}}</td>
-                    <td>{{cartItems.price}}</td>
-                    <td><button><a href="/cart/delete-cart/{{cartItems.pid}}">Delete</a></button></td>
+                    <td class="text-right">$<span class="qtyPriceMult">{{qtyMultiply cartItems.qty cartItems.price}}</span>.00</td>
                 </tr>
                 {{/each}}
                 {{else}}
@@ -33,15 +32,16 @@
                 {{/if}}
             </tbody>
         </table>
-        <div class="btn go-back">
-            <button id="goBackButton">Go Back</button>
+        <div class="d-flex align-items-end flex-column">
+            <h3>SUBTOTAL: <span id="subTot" class="font-weight-bold"></span></h3>
+            <h4>Shipping calculated at checkout</h4>
         </div>
-        <div class="checkout">
-            {{#if loggedIn}}
-            <a href="/checkout" title="checkoutTrue"> PROCEED TO CHECKOUT</a>
-            {{else}}
-            <a href="/login" title="checkoutFalse">LOGIN TO CHECKOUT</a>
-            {{/if}}
+        <div class="d-flex justify-content-between mt-2">
+            <button type="button" class="btn-primary btn-outline-secondary btn-lg" id="goBackButton">GO BACK</button>
+            <button type="button" class="btn-primary btn-lg">PROCEED TO CHECKOUT</button>                
         </div>
-    </div>
+        
+    </div>   
 </div>
+
+<script src="./js/subtotal.js"></script>
