@@ -362,5 +362,9 @@
  }
 
  .login-center {
-    text-align: center;
+     text-align: center;
+ }
+
+ #logout {
+     border: 0;
  }
