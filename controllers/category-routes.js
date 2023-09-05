@@ -43,7 +43,7 @@ router.get('/:slug', async (req, res) => {
       return v
     }
   })
-
+console.log(finalProductLists)
   res.render('category-filter', { cuatData, catData, finalsubCatId, finalProductLists, loggedIn: req.session.loggedIn });
 });
 

@@ -3,6 +3,7 @@
         <table class="table">
             <thead>
                 <tr>
+                    
                     <th scope="col">Sr.No</th>
                     <th scope="col">Product image</th>
                     <th scope="col">Product name</th>
@@ -16,7 +17,8 @@
 
             <tbody>
                 {{#if cart}}
-                {{#each cart as | cartItems |}}
+
+                {{#each cart.cart as | cartItems |}}
                 <tr>
                     <th scope="row">{{cartItems.pid}}</th>
                     <td><img src='{{cartItems.productImage}}' width="40px" /></td>

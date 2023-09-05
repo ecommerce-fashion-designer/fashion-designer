@@ -1,7 +1,7 @@
 let productSearchItems=document.querySelector("#productSearchItems")
 let searchProductValueList=document.querySelector("#searchProductCat");
 searchProductValueList.addEventListener("keyup",  (e)=>{
-       
+    
 productSearchItems.innerHTML="";
     fetch('/api/products?pname='+e.target.value)
    .then((res)=>{
@@ -46,6 +46,7 @@ let priceFilter=document.querySelector("#price-filter")
 priceFilter.addEventListener("change",(e)=>{
     productSearchItems.innerHTML="";
     fprice.innerHTML=e.target.value;
+    console.log(e.target.value)
     let filterValue=Number(e.target.value)
     fetch('/api/products/price')
     .then((res)=>{
@@ -55,9 +56,9 @@ priceFilter.addEventListener("change",(e)=>{
     return finalResponse.proData
  })
  .then((filterResult)=>{
-console.log(filterResult)
-filterResult.forEach(element => {
 
+filterResult.forEach(element => {
+console.log(element.product_image_path)
     if(Number(element.price)>=15 && Number(element.price)<filterValue)
     productSearchItems.innerHTML+=` <div class="col-md-4">
     <div class="product-list-items">

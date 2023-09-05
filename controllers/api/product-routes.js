@@ -4,6 +4,24 @@ const {slugify}=require('slugify')
 const { Op } = require("sequelize");
 
 
+//price filter
+router.get('/price', async(req, res) => {
+ 
+  try{
+    const proData=await Product.findAll({
+     
+      
+ });
+ res.status(200).json({
+proData,
+message:"you get all products price"
+ });
+}catch(error){
+  res.status(500).json(error);
+}
+
+});
+
 //end point api/products
 router.get('/', async(req, res) => {
  

@@ -13,7 +13,7 @@
             </thead>
 
             <tbody>
-                {{#if cart}}
+               
                 {{#each cart as | cartItems |}}
                 <tr>
                     <td><img src='{{cartItems.productImage}}' width="40px" /></td>
@@ -27,11 +27,11 @@
                             cartItems.price}}</span>.00</td>
                 </tr>
                 {{/each}}
-                {{else}}
+              
                 <tr>
                     <td class="text-center" colspan="6">No More Data</td>
                 </tr>
-                {{/if}}
+               
             </tbody>
         </table>
         <div class="d-flex align-items-end flex-column">
