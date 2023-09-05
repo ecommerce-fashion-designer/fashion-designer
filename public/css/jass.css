@@ -416,3 +416,7 @@
  #logout {
      border: 0;
  }
+
+ .checkout-details {
+     text-align: center;
+ }
