@@ -1,6 +1,5 @@
-{{!-- header --}}
-<header class="d-flex  align-content-center">
-    {{!-- <div class="logo">Logo</div> --}}
+{{!-- <header class="d-flex  align-content-center">
+    <div class="logo">Logo</div>
     <img id="logo" class="logo" src="../../images/logo-1.jpg" alt="Logo">
 
 
@@ -14,57 +13,53 @@
     </nav>
     <div class="cart text-end "><button class="bg-primary px-4 text-white"><a href="/cart"
                 class="bg-primary px-4 text-white">{{cartTotal}} Cart</a></button></div>
-</header>
-<section>
+</header> --}}
 
-    {{!-- body start here --}}
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-md-6 col-12">
-                    <div class="product-details-img">
-                        <img src={{productData.product_image_path}} alt="hhh" title="df" />
-                    </div>
+{{!-- body start here --}}
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <div class="product-details-img">
+                    <img src={{productData.product_image_path}} alt="hhh" title="df" />
                 </div>
-                <div class="col-md-6 col-12">
-                    <div class="product-info">
-                        <h2>{{productData.product_name}}</h2>
-                        {{!-- <p>Item code</p> --}}
-                        <h3>${{productData.price}}</h3>
-                        {{!-- <div>
-                            <h3>Select Color</h3>
-                            <select>
-                                <option>{{productData.color.color_name}}</option>
-                            </select>
-                        </div> --}}
-                        <p>Available:
-                            {{#if productData.is_stock}}
-                            Yes
-                            {{/if}}
-                            {{#else}}
-                            No
-                            {{/else}}
-                        </p>
-                        <p>
-                            # Items in Stock: {{productData.stock}}
-                        </p>
-                        <div>
-                            <h4>PRODUCT Description</h4>
-                            <ul>
-                                <li>{{productData.product_desc}}</li>
-                            </ul>
-                        </div>
-                        <div class="btn-addToCArt">
-
-                            <button><a href="/cart/add-to-cart/{{productData.id}}">Add to Cart</a></button>
-                        </div>
-                        <div class="btn go-back">
-                            <button id="goBackButton">Go Back</button>
-                        </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="product-info">
+                    <h2>{{productData.product_name}}</h2>
+                    {{!-- <p>Item code</p> --}}
+                    <h3>${{productData.price}}</h3>
+                    {{!-- <div>
+                        <h3>Select Color</h3>
+                        <select>
+                            <option>{{productData.color.color_name}}</option>
+                        </select>
+                    </div> --}}
+                    <p>Available:
+                        {{#if productData.is_stock}}
+                        Yes
+                        {{/if}}
+                        {{#else}}
+                        No
+                        {{/else}}
+                    </p>
+                    <p>
+                        # Items in Stock: {{productData.stock}}
+                    </p>
+                    <div>
+                        <h4>Product Description</h4>
+                        <ul>
+                            <li>{{productData.product_desc}}</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a href="/cart/add-to-cart/{{productData.id}}" class="btn btn-primary btn-lg btn-block">ADD TO CART • ${{productData.price}}</a>
+                    </div>
+                    <div class="mt-4 d-flex justify-content-center">
+                        <button type="button" class="btn-primary btn-outline-secondary btn-lg" id="goBackButton">GO BACK</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>

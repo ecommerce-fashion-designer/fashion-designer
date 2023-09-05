@@ -35,7 +35,13 @@
                                 <a class="nav-link" href="/product" title="products">PRODUCTS</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/cart" title="cart">CART</a>
+                                <a class="nav-link" href="/cart" title="cart">CART
+                                    {{!-- {{#if cart}} --}}
+                                    <span class="badge rounded-pill bg-danger">
+                                        {{cartTotal}}
+                                    </span>
+                                    {{!-- {{/if}} --}}
+                                </a>
                             </li>
                             <li class="nav-item">
                                 {{#if loggedIn}}

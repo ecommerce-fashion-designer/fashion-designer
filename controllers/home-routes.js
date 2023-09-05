@@ -5,6 +5,8 @@ const Product = require('../models/product');
 
 // Route to render homepage with category names and a randomised associated product image
 router.get('/', async (req, res) => {
+    let cartTotal = req.session.cart ?? [];
+    let finalcart = req.session.cart ?? [];
     try {
         // const category = await Category.findAll({
         //         include: [
@@ -33,7 +35,7 @@ router.get('/', async (req, res) => {
 
         // console.log(categoryProductImageData);
 
-        res.render('homepage');
+        res.render('homepage', {finalcart, cartTotal: cartTotal.length, loggedIn: req.session.loggedIn });
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
