@@ -47,9 +47,9 @@ router.get('/add-to-cart/:pid?', async (req, res) => {
 
 // cart length
 router.get('/', async (req, res) => {
-
+  let cartTotal = req.session.cart ?? []
   let finalcart = req.session.cart ?? []
-  res.render('cart', { 'cart': finalcart, loggedIn: req.session.loggedIn });
+  res.render('cart', { 'cart': finalcart, cartTotal: cartTotal.length, loggedIn: req.session.loggedIn });
 });
 
 //delete cart
