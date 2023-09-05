@@ -43,8 +43,10 @@ router.get('/:slug', async (req, res) => {
       return v
     }
   })
-console.log(finalProductLists)
-  res.render('category-filter', { cuatData, catData, finalsubCatId, finalProductLists, loggedIn: req.session.loggedIn });
+
+  let cartTotal = req.session.cart ?? []
+
+  res.render('category-filter', { cuatData, catData, finalsubCatId, finalProductLists, cartTotal: cartTotal.length, loggedIn: req.session.loggedIn });
 });
 
 
@@ -89,7 +91,9 @@ router.get('/sub-category/:slug/:sslug', async (req, res) => {
     console.log(element);
   });
 
-  res.render('category-filter', { catData, cuatData, finalProductLists: pData.products, loggedIn: req.session.loggedIn, });
+  let cartTotal = req.session.cart ?? []
+
+  res.render('category-filter', { catData, cuatData, finalProductLists: pData.products, cartTotal: cartTotal.length, loggedIn: req.session.loggedIn, });
 })
 
 module.exports = router;

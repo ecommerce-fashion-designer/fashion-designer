@@ -294,7 +294,7 @@
  .productImage {
      display: table-cell;
      vertical-align: middle;
-     height: 462px;
+     height: 400px;
      transition: .3s;
      cursor: pointer;
  }

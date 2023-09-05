@@ -10,7 +10,8 @@ const slugify = require('slugify')
 // header
 router.get('/', async (req, res) => {
 
-
+  let cartTotal = req.session.cart ?? []
+  
   const category = await Category.findAll({
     include: [
       {
@@ -37,6 +38,7 @@ router.get('/', async (req, res) => {
   const productList = productData.map((item) => item.get({ plain: true }));
 
   res.render('product', {
+    cartTotal: cartTotal.length,
     productList,
     catData,
     loggedIn: req.session.loggedIn,
