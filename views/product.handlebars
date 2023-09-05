@@ -1,7 +1,20 @@
 {{!-- header --}}
 
 
-{{> header catData=catData}}
+<header class="d-flex  align-content-center">
+    <div class="logo">Logo</div>
+    <nav class="position-relative">
+        <ul class="d-flex justify-content-center align-content-center">
+            {{#each catData as | catItems|}}
+            <li><a href="/category/{{catItems.slug}}">{{catItems.category_name}}</a>
+            </li>
+            {{/each}}
+        </ul>
+    </nav>
+ 
+    <div class="cart text-end serch-input"> <input type="search" placeholder="search here..." id="searchProductCat"/>
+        </i></div>
+</header>
 
 {{!-- Body --}}
 <div class="row mt-5">
@@ -34,13 +47,14 @@
             </div>
             <div class="list-itme-list">
                 <h3>Filter By price</h3>
-                <input type="range" min="0" max="500">
+                <span id="fprice"></span>
+                <input type="range" min="15" max="200" id="price-filter" >
             </div>
 
         </div>
     </div>
     <div class="col-md-9">
-        <div class="row">
+        <div class="row" id="productSearchItems">
             {{#each productList as | proItems |}}
             <div class="col-md-4">
                 <div class="product-list-items">
@@ -64,3 +78,6 @@
 
     </div>
 </div>
+
+
+<script src="/js/product.js"></script>

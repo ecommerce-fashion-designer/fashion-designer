@@ -1,14 +1,39 @@
 const router = require('express').Router();
 const {  Product } = require('../../models');
 const {slugify}=require('slugify')
+const { Op } = require("sequelize");
 
 
 //end point api/products
+//price filter
+router.get('/price', async(req, res) => {
+ 
+  try{
+    const proData=await Product.findAll({
+     
+      
+ });
+ res.status(200).json({
+proData,
+message:"you get all products price"
+ });
+}catch(error){
+  res.status(500).json(error);
+}
+
+});
 
 
 router.get('/', async(req, res) => {
+ 
+  let productName=req.query.pname
   try{
     const proData=await Product.findAll({
+      where: {
+        product_name: {
+          [Op.like]: `%${productName}%`
+        }
+      }
       
  });
  res.status(200).json({

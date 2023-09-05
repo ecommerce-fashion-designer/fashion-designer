@@ -9,8 +9,6 @@ const slugify=require('slugify')
 // route to get all categories
 // header
 router.get('/', async (req, res) => {
-
-
     const category = await Category.findAll({
       include: [
         {
