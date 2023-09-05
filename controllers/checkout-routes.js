@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
 
 
     if (req.session.loggedIn) {
-        res.render('checkout', { 'cart': checkOutData });
+        res.render('checkout', { 'cart': checkOutData , loggedIn: req.session.loggedIn});
         return;
     }
     res.redirect('/login');
