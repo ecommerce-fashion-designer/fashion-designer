@@ -1,8 +1,21 @@
 {{!-- header --}}
 
-{{> header catData=catData}}
+{{!-- {{> header catData=catData}} --}}
 
-
+<header class="d-flex  align-content-center justify-content-end container">
+    <div class="row">
+        {{!-- <img id="logo" class="logo col-lg-3" src="../../images/logo-1.jpg" alt="Logo"> --}}
+        <nav class="position-relative col-lg-6">
+            <ul class="d-flex justify-content-center align-content-center">
+                {{#each catData as | catItems|}}
+                <li><a href="/category/{{catItems.slug}}">{{catItems.category_name}}</a>
+                </li>
+                {{/each}}
+            </ul>
+        </nav>
+    
+    </div>
+</header>
 {{!-- Body --}}
 <div class="container-fluid g-0" id="header-image">
     <div class="row">
