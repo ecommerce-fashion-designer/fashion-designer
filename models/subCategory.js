@@ -32,8 +32,7 @@ SubCategory.init(
         type: DataTypes.DATE,
         defaultValue: DataTypes.NOW,
     }
-  },
- 
+  }, 
   {
     sequelize,
     timestamps: false,
@@ -42,7 +41,6 @@ SubCategory.init(
     modelName: 'subCategory',
   }
 );
-
 
 SubCategory.afterCreate(function(cat, options, fn) {
     var slugify = require('slug');

@@ -26,7 +26,6 @@ Category.init(
       defaultValue: DataTypes.NOW,
     }
   },
-
   {
     sequelize,
     timestamps: false,

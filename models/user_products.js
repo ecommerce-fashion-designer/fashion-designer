@@ -11,9 +11,7 @@ UserProduct.init(
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
-
         },
-
         product_id: {
             type: DataTypes.INTEGER,
             references: {
@@ -41,7 +39,6 @@ UserProduct.init(
             defaultValue: DataTypes.NOW,
         }
     },
-
     {
         sequelize,
         timestamps: false,
