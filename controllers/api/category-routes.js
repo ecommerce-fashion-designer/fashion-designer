@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Category ,SubCategory } = require('../../models');
-const {slugify}=require('slugify')
+const slugify=require('slugify')
 
 router.get('/', async(req, res) => {
   try{
@@ -38,19 +38,15 @@ router.get('/:id', async(req, res) => {
 //create category 
 router.post('/', async(req, res) => {
 
-  const { name } = req.body;
+  const { category_name } = req.body;
 
-    // existing category
-    const existingName = await Category.findOne({ name });
-    if (existingName) {
-      return res.status(200).send({
-        success: true,
-        message: "category already exists",
-      });
-    }
-    console.log(existingName)
+
  try{
-  const catData=await Category.create(req.body);
+  const catData=await Category.create({
+     category_name,
+     slug: slugify(category_name)
+  });
+  console.log(catData)
   res.status(200).json(catData)
 
  }catch(error){
@@ -62,7 +58,9 @@ router.post('/', async(req, res) => {
 //update data
 router.put('/:id', async(req, res) => {
  try{
-const catData=await Category.update(req.body,{
+ 
+  const {category_name} =  req.body;
+const catData=await Category.update({category_name,slug:slugify(category_name)},{
   where:{
     id:req.params.id
   }

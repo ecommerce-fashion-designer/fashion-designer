@@ -41,6 +41,7 @@ router.get('/add-to-cart/:pid?', async (req, res) => {
   }
 
   req.session.cart = finalCart
+ 
   res.redirect('/cart')
 });
 
@@ -63,7 +64,8 @@ router.get('/delete-cart/:pid?', async (req, res) => {
   })
 
   req.session.cart = finalCart
-  res.redirect('/cart')
+  res.render('cart',{"message":"item delete successfully"})
+  // res.redirect('/cart')
 })
 
 
