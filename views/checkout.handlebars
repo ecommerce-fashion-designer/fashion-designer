@@ -1,80 +1,86 @@
-<div class="checkout-details container-fluid py-5">
-    <div class="container">
-        <table class="table">
-            <thead>
-                <tr>
-                    
-                    <th scope="col">Sr.No</th>
-                    <th scope="col">Product image</th>
-                    <th scope="col">Product name</th>
-                    <th scope="col">Quantity</th>
+<div class="d-flex checkout-details">
+    <div class="container p-4">
+        <h1>Shipping Details</h1><br>
+        <form class="row g-3" id="shipping-form">                          
+            <div class="col-md-6 mb-3">
+                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name">                
+            </div>
+            <div class="col-md-6 mb-3">
+                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name">                             
+            </div>
+            <div class="col-12 mb-3">
+                <input type="text" class="form-control" id="address1" name="address1" placeholder="Address 1">
+            </div>
+            <div class="col-12 mb-3">
+                <input type="text" class="form-control" id="address2" name="address2" placeholder="Address 2">
+            </div>
+            <div class="col-6 mb-3">
+                <input type="text" class="form-control" id="city" name="city" placeholder="City">
+            </div>
+            <div class="col-4 mb-3">
+                <input type="text" class="form-control" id="state" name="state" placeholder="State">
+            </div>
+            <div class="col-2 mb-3">
+                <input type="text" class="form-control" id="postcode" name="postcode" placeholder="Postcode">
+            </div>            
+        </form>
 
-                    <th>Price</th>
-                    <th scope="col">Total</th>
-                    <th>Delete</th>
+        <h1>Payment Details</h1><br>
+        <form class="row g-3" id="payment-form">
+            <div class="col-12 mb-3">
+                <input type="text" class="form-control" id="cardnumber" name="cardnumber" placeholder="Card number">
+            </div>
+            <div class="col-6 mb-3">
+                <input type="text" class="form-control" id="expiry" name="expiry" placeholder="Expiration Date (MM/YY)">
+            </div>
+            <div class="col-6 mb-3">
+                <input type="text" class="form-control" id="ccv" name="ccv" placeholder="CCV">
+            </div>
+            <div class="col-12 mb-3">
+                <input type="text" class="form-control" id="namecard" name="namecard" placeholder="Name on card">
+            </div>  
+        </form>
+    </div>
+    <div class="bg-light p-4">
+        <table class="table table-sm table-borderless">
+            <thead class="font-weight-bold">
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col" class="text-right"></th>
                 </tr>
             </thead>
 
             <tbody>
                 {{#if cart}}
-
                 {{#each cart.cart as | cartItems |}}
                 <tr>
-                    <th scope="row">{{cartItems.pid}}</th>
-                    <td><img src='{{cartItems.productImage}}' width="40px" /></td>
-                    <td>{{cartItems.productNamme}}</td>
-                    <td>{{cartItems.qty}}</td>
-                    <td>{{cartItems.price}}</td>
-                    <td><button><a href="/cart/delete-cart/{{cartItems.pid}}">Delete</a></button></td>
+                    <td><img src='{{cartItems.productImage}}' width="40px"/>
+                    <td class="font-weight-bold">{{cartItems.productNamme}} x{{cartItems.qty}}</td>
+                    <td class="text-right text-nowrap">$<span class="qtyPriceMult">
+                        {{qtyMultiply cartItems.qty cartItems.price}}</span>.00</td>
                 </tr>
                 {{/each}}
                 {{else}}
                 <tr>
-                    <td class="text-center" colspan="6">No More Data</td>
+                    <td class="text-center" colspan="6">NO ITEMS IN CART</td>
                 </tr>
                 {{/if}}
             </tbody>
         </table>
-
-        <h1>Shipping Details</h1><br>
-        <form id="shipping-form">
-            <label for="full-name">Full Name:</label>
-            <input type="text" id="full-name" name="full-name" required><br><br>
-
-            <label for="address">Address:</label>
-            <input type="text" id="address" name="address" required><br><br>
-
-            <label for="city">City:</label>
-            <input type="text" id="city" name="city" required><br><br>
-
-            <label for="state">State:</label>
-            <input type="text" id="state" name="state" required><br><br>
-
-            <label for="zip-code">Zip Code:</label>
-            <input type="text" id="zip-code" name="zip-code" required><br><br>
-        </form>
-
-        <h1>Payment Details</h1><br>
-        <form id="payment-form">
-            <label for="card-number">Card Number:</label>
-            <input type="text" id="card-number"><br><br>
-
-            <label for="card-holder">Cardholder Name:</label>
-            <input type="text" id="card-holder"><br><br>
-
-            <label for="expiry-date">Expiry Date (MM/YY):</label>
-            <input type="text" id="expiry-date"><br><br>
-
-            <label for="ccv">CCV:</label>
-            <input type="text" id="cvv"><br><br>
-        </form>
-
-
-        <div class="success">
-            <a href="/success" title="checkoutTrue"> CONFIRM PAYMENT</a>
+        <div class="d-flex align-items-end flex-column">
+            <h3>SUBTOTAL: <span id="subTot" class="font-weight-bold"></span></h3>
+            <h4>Shipping: <span id="shipping" class="font-weight-bold"></span></h4>
+            <h2>TOTAL: <span id="total" class="font-weight-bold"></span></h2>                      
         </div>
-        <div class="btn go-back">
-            <button id="goBackButton">Go Back</button>
+        <div class="success">
+            <a href="/success" title="checkoutTrue" class="btn btn-primary btn-lg btn-block"> CONFIRM PAYMENT</a>
+        </div>
+        <div class="mt-4 justify-content-center">
+            <button type="button" class="btn-primary btn-outline-secondary btn-lg" id="goBackButton">GO BACK</button>
         </div>
     </div>
 </div>
+
+<script src="./js/subtotal.js"></script>
+<script src="./js/shipping-total.js"></script>
