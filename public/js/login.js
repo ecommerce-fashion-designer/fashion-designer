@@ -12,7 +12,7 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/product'); // change here for relocation
+      document.location.replace('/'); // change here for relocation
     } else {
       alert('Failed to log in.');
     }
@@ -39,8 +39,8 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      alert('Login Successful!')
-      document.location.replace('/product'); // change here for relocation
+      alert('Signup Successful, you are now logged in!')
+      document.location.replace('/'); // change here for relocation
     } else {
       alert('Failed to sign up.');
     }

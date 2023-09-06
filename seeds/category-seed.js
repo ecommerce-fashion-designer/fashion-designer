@@ -10,10 +10,10 @@ const categoryData = [
       category_name: 'Women',
       slug: 'women'
    },
-   //   {
-   //      category_name: 'Kids',
-   //      slug:'kids',
-   //   },
+   {
+      category_name: 'Accessories',
+      slug: 'accessories',
+   },
 
 ];
 

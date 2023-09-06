@@ -1,8 +1,21 @@
 {{!-- header --}}
 
-{{> header catData=catData}}
+{{!-- {{> header catData=catData}} --}}
 
+<header class="d-flex  align-content-center justify-content-end container">
+    <div class="row">
+        {{!-- <img id="logo" class="logo col-lg-3" src="../../images/logo-1.jpg" alt="Logo"> --}}
+        <nav class="position-relative col-lg-6">
+            <ul class="d-flex justify-content-center align-content-center">
+                {{#each catData as | catItems|}}
+                <li><a href="/category/{{catItems.slug}}">{{catItems.category_name}}</a>
+                </li>
+                {{/each}}
+            </ul>
+        </nav>
 
+    </div>
+</header>
 {{!-- Body --}}
 <div class="container-fluid g-0" id="header-image">
     <div class="row">
@@ -17,14 +30,15 @@
 <div class="container-fluid">
     <div class="container py-5" id="shop-now">
         <div class="row border-bottom">
-                <h2>SHOP NOW</h2>
+            <h2>SHOP NOW</h2>
         </div>
         <div class="row" id="shop-cards">
             {{!-- {{#each categoryProductImageData as | categories |}}
             <div class="col-4">
                 <a href="/category/{{categories.slug}}">
                     <div class="card">
-                        <img src="{{categories.pdata.subcat.product_image_path}}" class="card-img-top" alt="{{categories.category_name}}">
+                        <img src="{{categories.pdata.subcat.product_image_path}}" class="card-img-top"
+                            alt="{{categories.category_name}}">
                         <div class="card-body">
                             <h4 class="card-title text-uppercase">{{categories.category_name}}</h4>
                         </div>
@@ -53,9 +67,9 @@
                 </a>
             </div>
             <div class="col-xl-4 col-6">
-                <a href="/category/kids">
+                <a href="/category/accessories">
                     <div class="card">
-                        <img src="#" class="card-img-top" alt="Kids'">
+                        <img src="/images/shoes/shoes-1.jpg" class="card-img-top" alt="accessories'">
                         <div class="card-body">
                             <h4 class="card-title text-uppercase">SHOP ACCESSORIES</h4>
                         </div>
@@ -75,21 +89,24 @@
                 <img src="/images/icons/ethical-business.png" class="icon" alt="Ethical" width="80px" height="auto">
                 <div class="card-body">
                     <h4 class="card-title text-center">Ethical Business</h4>
-                    <p class="card-text text-center">Behind the garments we produce are individuals. We've implemented thoughtfully designed work systems to guarantee their well-being and equitable remuneration.</p>
+                    <p class="card-text text-center">Behind the garments we produce are individuals. We've implemented
+                        thoughtfully designed work systems to guarantee their well-being and equitable remuneration.</p>
                 </div>
             </div>
             <div class="col-xl-3 col-md-5 col-12 mx-2 d-flex flex-column align-items-center">
                 <img src="/images/icons/sustainable.png" class="icon" alt="Sustainable" width="80px" height="auto">
                 <div class="card-body">
                     <h4 class="card-title text-center">Sustainable Production</h4>
-                    <p class="card-text text-center">We strive to reduce our ecological footprint while maintaining the highest quality standards.</p>
+                    <p class="card-text text-center">We strive to reduce our ecological footprint while maintaining the
+                        highest quality standards.</p>
                 </div>
             </div>
             <div class="col-xl-3 col-md-5 col-12 mx-2 d-flex flex-column align-items-center">
                 <img src="/images/icons/give-back.png" class="icon" alt="Sustainable" width="80px" height="auto">
                 <div class="card-body">
                     <h4 class="card-title text-center">We Give Back</h4>
-                    <p class="card-text text-center">We give back to the community through support for charitable organizations.</p>
+                    <p class="card-text text-center">We give back to the community through support for charitable
+                        organizations.</p>
                 </div>
             </div>
         </div>

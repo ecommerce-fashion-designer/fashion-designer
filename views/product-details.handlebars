@@ -27,25 +27,19 @@
             <div class="col-md-6 col-12">
                 <div class="product-info">
                     <h2>{{productData.product_name}}</h2>
-                    {{!-- <p>Item code</p> --}}
+
                     <h3>${{productData.price}}</h3>
-                    {{!-- <div>
-                        <h3>Select Color</h3>
-                        <select>
-                            <option>{{productData.color.color_name}}</option>
-                        </select>
-                    </div> --}}
-                    <p>Available:
+
+                    <div>
                         {{#if productData.is_stock}}
-                        Yes
+                        <p>
+                            # Items in Stock: {{productData.stock}}
+                        </p>
+                        {{else}}
+                        <p id="no-stock">Currently Out of Stock</p>
                         {{/if}}
-                        {{#else}}
-                        No
-                        {{/else}}
-                    </p>
-                    <p>
-                        # Items in Stock: {{productData.stock}}
-                    </p>
+                    </div>
+
                     <div>
                         <h4>Product Description</h4>
                         <ul>
@@ -53,10 +47,14 @@
                         </ul>
                     </div>
                     <div>
-                        <a href="/cart/add-to-cart/{{productData.id}}" class="btn btn-primary btn-lg btn-block">ADD TO CART • ${{productData.price}}</a>
+                        {{#if productData.is_stock}}
+                        <a href="/cart/add-to-cart/{{productData.id}}" class="btn btn-primary btn-lg btn-block">ADD TO
+                            CART • ${{productData.price}}</a>
+                        {{/if}}
                     </div>
                     <div class="mt-4 d-flex justify-content-center">
-                        <button type="button" class="btn-primary btn-outline-secondary btn-lg" id="goBackButton">GO BACK</button>
+                        <button type="button" class="btn-primary btn-outline-secondary btn-lg" id="goBackButton">GO
+                            BACK</button>
                     </div>
                 </div>
             </div>

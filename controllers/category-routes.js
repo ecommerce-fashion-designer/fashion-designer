@@ -9,7 +9,7 @@ const slugify = require('slugify')
 // route to get all categories
 
 router.get('/:slug', async (req, res) => {
-
+console.log(req.params)
   const category = await Category.findAll();
   const catData = category.map((catItem) =>
     catItem.get({ plain: true })
@@ -17,7 +17,7 @@ router.get('/:slug', async (req, res) => {
 
   const currentCategory = await Category.findOne({
     where: {
-      slug: req.params.slug
+     slug: req.params.slug 
     },
     include: [
       {
@@ -26,6 +26,7 @@ router.get('/:slug', async (req, res) => {
       },
     ],
   });
+
 
   const cuatData = currentCategory.get({ plain: true });
   
