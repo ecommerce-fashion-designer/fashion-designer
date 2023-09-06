@@ -12,8 +12,9 @@
                 {{/each}}
             </ul>
         </nav>
-    
-        <div class="cart text-end serch-input col-lg-3"> <input type="search" placeholder="search here..." id="searchProductCat"/>
+
+        <div class="cart text-end serch-input col-lg-3"> <input type="search" placeholder="search here..."
+                id="searchProductCat" />
             </i></div>
     </div>
 </header>
@@ -49,14 +50,18 @@
                 </div>
                 <div class="list-itme-list">
                     <h3>Filter By price</h3>
-                     <span id="fprice">$</span><br/>
-                <input type="range" min="15" max="200" id="price-filter" >
+                    <span id="fprice"></span><br />
+                    <input type="range" min="15" max="200" id="price-filter">
+                    <p>Less than $50</p>
+                    <p>$50 - $75</p>
+                    <p>$75 - $100</p>
+                    <p>$100 or more</p>
                 </div>
 
             </div>
         </div>
         <div class="col-md-9">
-            <div class="row"  id="productSearchItems">
+            <div class="row" id="productSearchItems">
                 {{#each productList as | proItems |}}
                 <div class="col-12 col-md-6 col-xl-4">
                     <div class="product-list-items">
@@ -66,9 +71,9 @@
                                     alt="Card image cap">
                             </a>
 
-                        <div class="card-body">
-                            <h5 class="card-title product-title">{{proItems.product_name}}</h5>
-                            <p class="card-text product-price">Price: ${{proItems.price}}</p>
+                            <div class="card-body">
+                                <h5 class="card-title product-title">{{proItems.product_name}}</h5>
+                                <p class="card-text product-price">Price: ${{proItems.price}}</p>
 
                             </div>
                         </div>

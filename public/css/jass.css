@@ -7,14 +7,14 @@
 
  :root {
      --primary-color: #b78723;
-     --secondary-color: #fff6d6; 
+     --secondary-color: #fff6d6;
      --green: #223112;
      --green-transparent: rgba(34, 49, 18, 0.85);
      --font-family: 'Poppins', sans-serif;
  }
 
  a {
-    text-decoration: none;
+     text-decoration: none;
  }
 
  .header {
@@ -25,44 +25,49 @@
  }
 
  .primary-background {
-    background-color: var(--primary-color);
+     background-color: var(--primary-color);
  }
+
  .secondary-background {
-    background-color: var(--secondary-color);
+     background-color: var(--secondary-color);
  }
 
  .green-background {
-    background-color: var(--green);
+     background-color: var(--green);
  }
 
- #about-cards, #shop-cards {
-    margin-top: 20px;
+ #about-cards,
+ #shop-cards {
+     margin-top: 20px;
  }
 
  #shop-cards .card {
-    background-color: var(--green-transparent);
-    padding: 10px;
-    border-radius: 5px;
+     background-color: var(--green-transparent);
+     padding: 10px;
+     border-radius: 5px;
  }
 
  #shop-cards h4 {
-    color: white;
-    letter-spacing: 0.05em;
-    text-align: center;
+     color: white;
+     letter-spacing: 0.05em;
+     text-align: center;
  }
 
- footer, footer a {
-    color: white;
+ footer,
+ footer a {
+     color: white;
  }
 
  h2 {
-    padding-bottom: 10px;
-    font-weight: 700;
-    letter-spacing: 0.02em;
+     padding-bottom: 10px;
+     font-weight: 700;
+     letter-spacing: 0.02em;
  }
 
- .icon, h4, .bold-list {
-    padding-bottom: 15px;
+ .icon,
+ h4,
+ .bold-list {
+     padding-bottom: 15px;
  }
 
  .x {
@@ -128,9 +133,9 @@
  }
 
  .nav-item a {
-    color: white;
-    font-size: 16px;
-    letter-spacing: 0.05em;
+     color: white;
+     font-size: 16px;
+     letter-spacing: 0.05em;
  }
 
  input[type='range'] {
@@ -409,8 +414,8 @@
  }
 
  .bold-list {
-    font-weight: 700;
-    letter-spacing: 0.05em;
+     font-weight: 700;
+     letter-spacing: 0.05em;
  }
 
  #logout {
@@ -421,8 +426,35 @@
      text-align: center;
  }
 
+
  .table-borderless tr, 
  .table-borderless td, 
  .table-borderless th {
     border-style: hidden;
 }
+
+ #borat {
+     text-align: center;
+ }
+
+ .login-center {
+     text-align: center;
+     justify-content: center;
+ }
+
+ .login-card {
+     margin-left: 5%;
+     margin-right: 5%;
+     padding-bottom: 3%;
+     padding-top: 2%;
+ }
+
+ #ship-pay {
+     text-align: end;
+     margin-right: 37%;
+ }
+
+ #no-stock {
+     color: red;
+     font-weight: bolder;
+ }
