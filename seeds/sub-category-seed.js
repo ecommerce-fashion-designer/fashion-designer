@@ -46,6 +46,27 @@ const subcategoryData = [
     slug: 'womens_tops',
     category_id: 2,
   },
+  {
+    sub_category_name: 'Glasses',
+    slug: 'glasses',
+    category_id: 3,
+  },
+  {
+    sub_category_name: 'Headware',
+    slug: 'headware',
+    category_id: 3,
+  },
+  {
+    sub_category_name: 'Shoes',
+    slug: 'Shoes',
+    category_id: 3,
+  },
+  {
+    sub_category_name: 'Watches',
+    slug: 'watches',
+    category_id: 3,
+  },
+
 ];
 
 const seedsubcategories = () => SubCategory.bulkCreate(subcategoryData);
