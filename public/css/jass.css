@@ -426,6 +426,13 @@
      text-align: center;
  }
 
+
+ .table-borderless tr, 
+ .table-borderless td, 
+ .table-borderless th {
+    border-style: hidden;
+}
+
  #borat {
      text-align: center;
  }
