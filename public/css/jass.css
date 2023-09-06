@@ -446,3 +446,8 @@
      text-align: end;
      margin-right: 37%;
  }
+
+ #no-stock {
+     color: red;
+     font-weight: bolder;
+ }

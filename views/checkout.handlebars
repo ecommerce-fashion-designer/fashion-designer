@@ -10,8 +10,8 @@
                     <th scope="col">Quantity</th>
 
                     <th>Price</th>
-                    <th scope="col">Total</th>
-                    <th>Delete</th>
+                    {{!-- <th scope="col">Total</th>
+                    <th>Delete</th> --}}
                 </tr>
             </thead>
 
@@ -25,7 +25,7 @@
                     <td>{{cartItems.productNamme}}</td>
                     <td>{{cartItems.qty}}</td>
                     <td>{{cartItems.price}}</td>
-                    <td><button><a href="/cart/delete-cart/{{cartItems.pid}}">Delete</a></button></td>
+
                 </tr>
                 {{/each}}
                 {{else}}
@@ -34,7 +34,15 @@
                 </tr>
                 {{/if}}
             </tbody>
-        </table>
+        </table><br><br>
+
+        <div class="d-flex align-items-center flex-column">
+
+            <h4>SUBTOTAL: <span id="subTot"></span></h4>
+            <h4>SHIPPING: $9.99</h4>
+            <h3 class="font-weight-bold">TOTAL PRICE: SUBTOTAL + $9.99</h3>
+
+        </div><br><br><br>
 
         <div id="ship-pay">
             <h1>Shipping Details</h1><br>
@@ -72,10 +80,15 @@
         </div>
 
         <div class="success">
-            <a href="/success" title="checkoutTrue"> <button class="btn-primary btn-lg">CONFIRM PAYMENT</button></a>
+            <a href="/success" title="checkoutTrue"> <button id="checkout-confirm" class="btn-primary btn-lg">CONFIRM
+                    PAYMENT</button></a>
+
+
         </div>
         <div class="btn go-back">
             <button class="btn-primary btn-outline-secondary btn-lg" id="goBackButton">Go Back</button>
         </div>
     </div>
 </div>
+
+<script src="./js/subtotal.js"></script>
