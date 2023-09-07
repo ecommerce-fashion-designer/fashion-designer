@@ -40,7 +40,7 @@ const signupFormHandler = async (event) => {
 
     if (response.ok) {
       alert('Signup Successful, you are now logged in!')
-      document.location.replace('/'); // change here for relocation
+      document.location.replace('/checkout'); // change here for relocation
     } else {
       alert('Failed to sign up.');
     }
