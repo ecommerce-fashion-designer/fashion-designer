@@ -13,9 +13,7 @@ We wanted to build an online fashion boutique e-commerce site that would allow v
 - [Installation](#Installation)
 - [Usage](#Usage)
 - [Contributing](#Contributing)
-- [Tests](#Tests)
 - [License](#License)
-- [Questions](#Questions)
 
 
 ## Installation
