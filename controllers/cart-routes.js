@@ -64,8 +64,8 @@ router.get('/delete-cart/:pid?', async (req, res) => {
   })
 
   req.session.cart = finalCart
-  res.render('cart',{"message":"item delete successfully"})
-  // res.redirect('/cart')
+  // res.render('cart',{"message":"item delete successfully"})
+  res.redirect('/cart')
 })
 
 
