@@ -21,6 +21,7 @@ We wanted to build an online fashion boutique e-commerce site that would allow v
 - [Usage](#Usage)
 - [Contributing](#Contributing)
 - [License](#License)
+- [License](#newPackage)
 
 
 ## Installation
@@ -36,7 +37,9 @@ Our project is free to use:
 
 
 
-
+# newPackage
+we have use new package slugify which imeans it is a human-readable, unique identifier, used to identify a resource instead of a less human-readable identifier like an id .why we have to use slug because
+Numeric IDs can be predictable and easy to guess, which can make it easier for malicious actors to access or modify resources. Slugs, on the other hand, are more difficult to guess and can provide an additional layer of security.
 
 
 ## Contributing
