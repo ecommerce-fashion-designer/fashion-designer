@@ -657,3 +657,6 @@ color: #fff;
 #offcanvasExample{
     display: none;
 }
+button{
+    padding: 10px;
+}
