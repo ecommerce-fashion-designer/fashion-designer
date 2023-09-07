@@ -1,11 +1,9 @@
-{{!-- header --}}
 
-{{!-- {{> header catData=catData}} --}}
 
 <header class="d-flex  align-content-center justify-content-end container">
     <div class="row">
         {{!-- <img id="logo" class="logo col-lg-3" src="../../images/logo-1.jpg" alt="Logo"> --}}
-        <nav class="position-relative col-lg-6">
+        <nav class="position-relative col-md-6 col-12">
             <ul class="d-flex justify-content-center align-content-center">
                 {{#each catData as | catItems|}}
                 <li><a href="/category/{{catItems.slug}}">{{catItems.category_name}}</a>
@@ -28,7 +26,7 @@
     </div>
 </div>
 <div class="container-fluid">
-    <div class="container py-5" id="shop-now">
+    <div class="container py-md-5" id="shop-now">
         <div class="row border-bottom">
             <h2>SHOP NOW</h2>
         </div>
@@ -46,7 +44,7 @@
                 </a>
             </div>
             {{/each}} --}}
-            <div class="col-xl-4 col-6">
+            <div class="col-lg-4 col-12 mesia">
                 <a href="/category/men">
                     <div class="card">
                         <img src="/images/pants/pants-1-1.jpg" class="card-img-top" alt="Men's">
@@ -56,7 +54,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-xl-4 col-6">
+            <div class="col-lg-4 col-12 mesia">
                 <a href="/category/women">
                     <div class="card">
                         <img src="/images/dresses/dress-7-1.jpg" class="card-img-top" alt="Women's">
@@ -66,7 +64,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-xl-4 col-6">
+            <div class="col-lg-4 col-12 mesia">
                 <a href="/category/accessories">
                     <div class="card">
                         <img src="/images/shoes/shoes-1.jpg" class="card-img-top" alt="accessories'">
@@ -80,7 +78,7 @@
     </div>
 </div>
 <div class="container-fluid bg-body-tertiary">
-    <div class="container py-5" id="about">
+    <div class="container py-md-5" id="about">
         <div class="row border-bottom">
             <h2>ABOUT 404 FASHION</h2>
         </div>
