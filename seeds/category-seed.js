@@ -4,7 +4,7 @@ const { Category } = require('../models');
 const categoryData = [
    {
       category_name: 'Men',
-      slug: 'men',
+      slug: 'men'
    },
    {
       category_name: 'Women',
@@ -12,8 +12,10 @@ const categoryData = [
    },
    {
       category_name: 'Accessories',
-      slug: 'accessories',
+      slug: 'accessories'
    },
+  
+
 
 ];
 

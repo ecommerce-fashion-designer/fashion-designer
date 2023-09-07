@@ -17,7 +17,7 @@ productSearchItems.innerHTML="";
         <div class="product-list-items">
             <div class="card" style="width: 18rem;">
                 <a href="/product/${element.slug}">
-                    <img class="card-img-top productImage" src=${element.product_image_path}
+                    <img class="card-img-top productImage" src='/${element.product_image_path}'
                         alt="Card image cap">
                 </a>
 
@@ -64,7 +64,7 @@ console.log(element.product_image_path)
     <div class="product-list-items">
         <div class="card" style="width: 18rem;">
             <a href="/product/${element.slug}">
-                <img class="card-img-top productImage" src=${element.product_image_path}
+                <img class="card-img-top productImage" src='/${element.product_image_path}'
                     alt="Card image cap">
             </a>
 

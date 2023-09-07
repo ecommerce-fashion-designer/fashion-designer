@@ -278,8 +278,8 @@ const productData = [
     product_desc: "Introducing the Gray Pleated Skirt, a chic and versatile addition to your closet. This skirt showcases a classic pleated design in a sophisticated shade of gray, offering both style and versatility. Its timeless silhouette makes it suitable for various occasions, from office meetings to casual outings. Pair it with a tucked-in blouse and pumps for a polished look, or style it with a graphic tee and sneakers for a more relaxed ensemble. Elevate your style with the Gray Pleated Skirt. Order now and embrace the enduring elegance of this wardrobe staple.",
     price: 60.00,
     product_spec: "Large",
-    stock: 0,
-    is_stock: false,
+    stock: 1,
+    is_stock: true,
     slug: "skirt_2",
     product_image_path: "../../images/skirts/skirt-2-1.jpg",
     sub_category_id: 8,
@@ -730,6 +730,7 @@ const productData = [
     color_id: 1
   },
 ];
+
 
 const seedProducts = () => Product.bulkCreate(productData);
 
