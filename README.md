@@ -25,20 +25,21 @@ Our project is deployed to a live site, should you wish to view it click on the 
 
 ## Usage
 
-Our project is free to use
+Our project is free to use:
 
 ![localhost_3001_ (1)](https://github.com/ecommerce-fashion-designer/fashion-designer/assets/131665093/a0f844fd-7399-44d0-a493-535534bf4898)
 
 
 ## Contributing
 
-Feel free to reach out if you wish to contribute further to our project. The contributor for this project were: Sam, Katy, Daniel and Lipika.
+Feel free to reach out if you wish to contribute further to our project. 
 
+The contributor for this project were: 
 
-## Tests
-
-N/A
-
+Sam: https://github.com/SamBeekman 
+Katy: https://github.com/katyjmt
+Daniel: https://github.com/higgdan
+Lipika: https://github.com/LipikaManglaa
 
 ## License
 
