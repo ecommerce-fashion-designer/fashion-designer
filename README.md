@@ -27,6 +27,8 @@ Our project is deployed to a live site, should you wish to view it click on the 
 
 Our project is free to use
 
+![localhost_3001_ (1)](https://github.com/ecommerce-fashion-designer/fashion-designer/assets/131665093/a0f844fd-7399-44d0-a493-535534bf4898)
+
 
 ## Contributing
 
