@@ -36,10 +36,10 @@ Feel free to reach out if you wish to contribute further to our project.
 
 The contributor for this project were: 
 
--Sam: https://github.com/SamBeekman 
--Katy: https://github.com/katyjmt
--Daniel: https://github.com/higgdan
--Lipika: https://github.com/LipikaManglaa
+-Sam: https://github.com/SamBeekman  
+-Katy: https://github.com/katyjmt  
+-Daniel: https://github.com/higgdan  
+-Lipika: https://github.com/LipikaManglaa  
 
 ## License
 
