@@ -9,6 +9,29 @@ router.get('/', async (req, res) => {
     let finalcart = req.session.cart ?? [];
     try {
         // const category = await Category.findAll({
+        //     include: SubCategory,
+        // });
+        // const categoryProductImageData = category.map((catItem) =>
+        //     catItem.get({ plain: true }));
+
+        res.render('homepage', {finalcart, cartTotal: cartTotal.length, loggedIn: req.session.loggedIn });
+
+        // res.status(200).json(categoryProductImageData);
+
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+})
+
+// router.get('/', (req, res) => {
+//     res.render('homepage');
+// });
+
+module.exports = router;    
+
+
+        // const category = await Category.findAll({
         //         include: [
         //             {
         //                 model: SubCategory,
@@ -34,16 +57,3 @@ router.get('/', async (req, res) => {
         // catItem.get({ plain: true }));
 
         // console.log(categoryProductImageData);
-
-        res.render('homepage', {finalcart, cartTotal: cartTotal.length, loggedIn: req.session.loggedIn });
-    } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-    }
-})
-
-// router.get('/', (req, res) => {
-//     res.render('homepage');
-// });
-
-module.exports = router;    
